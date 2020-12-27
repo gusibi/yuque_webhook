@@ -18,3 +18,7 @@
 .idea/
 
 http_test/
+
+# build
+build/api.zip
+build/main
