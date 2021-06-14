@@ -25,6 +25,6 @@ func main() {
 	}))
 	r.Use(gin.Recovery())
 	r.GET("/ping", api.Ping)
-	r.POST("/api/webhook", api.WebHook)
+	r.POST("/api/lark_webhook/:hook_id", api.LarkWebHook)
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }

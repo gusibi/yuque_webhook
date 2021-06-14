@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/gusibi/yuque_webhook/internal/config"
 	"github.com/gusibi/yuque_webhook/internal/yuque"
 	"net/http"
 )
@@ -15,7 +14,7 @@ func Ping(c *gin.Context) {
 	})
 }
 
-func WebHook(c *gin.Context) {
+func LarkWebHook(c *gin.Context) {
 
 	var req yuque.WebHookRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
@@ -29,7 +28,10 @@ func WebHook(c *gin.Context) {
 	if v, err := json.Marshal(req); err == nil {
 		fmt.Printf("%s\n", v)
 	}
-	hookId := config.Settings.LarkHookId
+	hookId := c.Param("hook_id")
+	if hookId == ""{
+		c.JSON(http.StatusBadRequest, gin.H{"error": "hook_id is invalid"})
+	}
 	larkNotify := &yuque.LarkWebHook{
 		MessageType:    yuque.PostMessage,
 		HookId:         hookId,

@@ -38,7 +38,7 @@ func init() {
 	}))
 	r.Use(gin.Recovery())
 	r.GET("/ping", api.Ping)
-	r.POST("/api/webhook", api.WebHook)
+	r.POST("/api/lark_webhook/:hook_id", api.LarkWebHook)
 	httpAdapter = httpadapter.New(r)
 	log.Println("adapter: ", httpAdapter)
 }

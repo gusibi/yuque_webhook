@@ -21,4 +21,7 @@ http_test/
 
 # build
 build/api.zip
+build/lark_yuque_webhook.zip
 build/main
+
+.DS_Store

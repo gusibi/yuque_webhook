@@ -2,6 +2,13 @@
 
 yuque webhook
 
+### API path
+
+/api/lark_webhook/:hook_id
+
+https://service-ki47z7xm-1254035985.gz.apigw.tencentcs.com:443/api/lark_webhook/55669168-4c28-4434-b3bd-5899a113c96a
+https://open.feishu.cn/open-apis/bot/v2/hook/55669168-4c28-4434-b3bd-5899a113c96a
+
 ### 支持webhook 通知类型
 
 * [x] 发布文档
