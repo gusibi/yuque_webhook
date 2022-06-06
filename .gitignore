@@ -17,6 +17,9 @@
 # IDE
 .idea/
 
+# aliyun
+.env
+
 http_test/
 
 # build

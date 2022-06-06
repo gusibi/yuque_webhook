@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export PORT=9000
+export GIN_MODE=release
+./yuque_webhook

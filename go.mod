@@ -3,6 +3,7 @@ module github.com/gusibi/yuque_webhook
 go 1.15
 
 require (
+	github.com/aliyun/fc-runtime-go-sdk v0.1.0
 	github.com/aws/aws-lambda-go v1.21.0
 	github.com/awslabs/aws-lambda-go-api-proxy v0.5.0
 	github.com/gin-gonic/gin v1.6.3

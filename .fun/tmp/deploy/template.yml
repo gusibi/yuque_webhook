@@ -1,0 +1,8 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  yuque_webhook:
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: This is FC service
+      InternetAccess: true
